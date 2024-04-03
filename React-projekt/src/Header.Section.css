@@ -1,0 +1,53 @@
+.header{
+    font-size: 15px;
+    color: red;
+}
+h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    background-color: rgb(170, 168, 165);
+    width: 100%;
+    text-align: start;
+    height: 45px;
+}
+.section{
+    display: flex;
+    gap: 1rem;
+    height: 10%;
+
+}
+h3{
+    margin-left: 30px;
+}
+.todo{
+    background-color:rgb(215, 42, 42) ; 
+    width: 20rem;
+    border-radius: 8%;
+    height: 37rem;
+    text-align: start;
+}
+.doing{
+    background-color:rgb(170, 125, 40) ; 
+    width: 20rem;
+    border-radius: 10%;
+    text-align: start;
+}
+.done{
+    background-color:rgb(24, 224, 67) ; 
+    width: 20rem;
+    border-radius: 10%;
+    text-align: start;
+}
+ul{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    width: 15rem;
+    padding: 20px;
+    margin: 12px;
+    height: 2rem;
+}
+.icon{
+    background-color: black;§
+}
