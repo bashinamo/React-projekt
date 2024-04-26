@@ -1,5 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope,faPlus } from '@fortawesome/free-solid-svg-icons'
+import Board from '@asseinfo/react-kanban'
+import '@asseinfo/react-kanban/dist/styles.css'
+export default function Section() {
+    
 
 
 function getDate() {
@@ -9,43 +11,31 @@ function getDate() {
     const date = today.getDate();
     return `${year}/${date}/${month}`;
   }
-export default function Section(){
-return(
-    <>
-        <section className="section">
-            <div className="todo">
-                <h3>Todo</h3>
-                    <ul>
-                        <li>hej</li>
-                        <p>{getDate()}</p>
-                    </ul>
-                    <p className='icon'>
-                    <FontAwesomeIcon icon={faPlus} />
-                    </p>
-            </div>
-            <div className="doing">
-                <h3>Doing</h3>
-                <ul>
-                    <li> hejjj</li>
-                    <p>{getDate()}</p>   
-                </ul>
-            </div>
-            <div className="done">
-                <h3>Done</h3>
-                <ul>
-                    <li>klar</li>
-                    <p>{getDate()}</p>
-                </ul>
-            </div>
-        </section>
-    </>
-)
+ const board = {
+    columns: [
+      {
+        id: 1,
+        title: 'Backlog',
+        cards: [
+          {
+            id: 1,
+            title: 'Add card',
+            description: 'Add capability to add a card in a column'
+          },
+        ]
+      },
+      {
+        id: 2,
+        title: 'Doing',
+        cards: [
+          {
+            id: 2,
+            title: 'Drag-n-drop support',
+            description: 'Move a card between the columns'
+          },
+        ]
+      }
+    ]
 }
-function läggTillAnteckning() {
-    const editorInnehåll = document.getElementsByClassName("todo").innerHTML.trim();
-    if (editorInnehåll !== "") {
-        sparaAnteckning(editorInnehåll);
-        document.getElementsByClassName("todo").innerHTML = "";
-    }
+ board = {Board}
 }
-
